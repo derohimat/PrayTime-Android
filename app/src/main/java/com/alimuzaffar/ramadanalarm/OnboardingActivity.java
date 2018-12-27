@@ -32,12 +32,12 @@ public class OnboardingActivity extends AppCompatActivity implements OnOnboardin
     super.onCreate(savedInstanceState);
     ScreenUtils.lockOrientation(this);
     setContentView(R.layout.activity_onboarding);
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
     // Instantiate a ViewPager and a PagerAdapter.
     Intent intent = getIntent();
     mCardIndex = intent.getIntExtra(EXTRA_CARD_INDEX, 0);
-    mPager = (ViewPager) findViewById(R.id.pager);
+    mPager = findViewById(R.id.pager);
     mPagerAdapter = new ScreenSlidePagerAdapter(getFragmentManager(), mCardIndex);
     mPager.setAdapter(mPagerAdapter);
   }

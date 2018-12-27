@@ -90,7 +90,7 @@ public class RingAlarmActivity extends AppCompatActivity implements Constants, V
 
     mSettings = AppSettings.getInstance(this);
 
-    mPrayerName = (TextView) findViewById(R.id.prayer_name);
+    mPrayerName = findViewById(R.id.prayer_name);
     mPrayerNameString = getIntent().getStringExtra(EXTRA_PRAYER_NAME);
 
     mPreAlarm = getIntent().hasExtra(EXTRA_PRE_ALARM_FLAG) && getIntent().getBooleanExtra(EXTRA_PRE_ALARM_FLAG, true);
@@ -104,7 +104,7 @@ public class RingAlarmActivity extends AppCompatActivity implements Constants, V
       mPrayerName.setText(getString(R.string.prayer_name_time, mPrayerNameString));
     }
 
-    mAlarmOff = (Button) findViewById(R.id.alarm_off);
+    mAlarmOff = findViewById(R.id.alarm_off);
     mAlarmOff.setOnClickListener(this);
 
     try {

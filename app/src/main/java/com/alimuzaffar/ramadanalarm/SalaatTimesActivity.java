@@ -54,7 +54,7 @@ public class SalaatTimesActivity extends AppCompatActivity implements Constants,
     setContentView(R.layout.activity_salaat_times);
     ScreenUtils.lockOrientation(this);
 
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
 
     mLocationHelper = (LocationHelper) getFragmentManager().findFragmentByTag(LOCATION_FRAGMENT);
@@ -63,12 +63,12 @@ public class SalaatTimesActivity extends AppCompatActivity implements Constants,
     mAdapter = new ScreenSlidePagerAdapter(getFragmentManager(),0);
 
     // Assigning ViewPager View and setting the adapter
-    mPager = (ViewPager) findViewById(R.id.pager);
+    mPager = findViewById(R.id.pager);
     mPager.setAdapter(mAdapter);
     mPager.addOnPageChangeListener(this);
 
     // Assiging the Sliding Tab Layout View
-    mTabs = (SlidingTabLayout) findViewById(R.id.tabs);
+    mTabs = findViewById(R.id.tabs);
     mTabs.setDistributeEvenly(true); // To make the Tabs Fixed set this true, This makes the tabs Space Evenly in Available width
 
     // Setting Custom Color for the Scroll bar indicator of the Tab View

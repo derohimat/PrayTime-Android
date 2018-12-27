@@ -227,7 +227,7 @@ public class LocationHelper extends Fragment implements Constants, GoogleApiClie
   }
 
   public void setLoationPermissionDenied(boolean mLoationPermissionDenied) {
-    this.sLoationPermissionDenied = mLoationPermissionDenied;
+    sLoationPermissionDenied = mLoationPermissionDenied;
   }
 
   public static boolean isLoationPermissionDenied() {

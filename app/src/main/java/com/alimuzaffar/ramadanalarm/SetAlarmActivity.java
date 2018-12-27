@@ -47,20 +47,20 @@ public class SetAlarmActivity extends AppCompatActivity implements Constants,
     super.onCreate(savedInstanceState);
     ScreenUtils.lockOrientation(this);
     setContentView(R.layout.activity_set_alarm);
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
 
-    mAlarm = (CheckBox) findViewById(R.id.alarm);
-    mAscending = (CheckBox) findViewById(R.id.ascending_alarm);
-    mRandom = (CheckBox) findViewById(R.id.random_ringtone);
-    mAdhan = (CheckBox) findViewById(R.id.adhan_ringtone);
-    mRingtone = (TextView) findViewById(R.id.ringtone);
+    mAlarm = findViewById(R.id.alarm);
+    mAscending = findViewById(R.id.ascending_alarm);
+    mRandom = findViewById(R.id.random_ringtone);
+    mAdhan = findViewById(R.id.adhan_ringtone);
+    mRingtone = findViewById(R.id.ringtone);
 
-    mPrayers[0] = (TextView) findViewById(R.id.fajr);
-    mPrayers[1] = (TextView) findViewById(R.id.dhuhr);
-    mPrayers[2] = (TextView) findViewById(R.id.asr);
-    mPrayers[3] = (TextView) findViewById(R.id.maghrib);
-    mPrayers[4] = (TextView) findViewById(R.id.isha);
+    mPrayers[0] = findViewById(R.id.fajr);
+    mPrayers[1] = findViewById(R.id.dhuhr);
+    mPrayers[2] = findViewById(R.id.asr);
+    mPrayers[3] = findViewById(R.id.maghrib);
+    mPrayers[4] = findViewById(R.id.isha);
 
     for (int i = 0; i < mPrayers.length; i++) {
       TextView tv = mPrayers[i];

@@ -71,7 +71,7 @@ public class KaabaLocatorFragment extends Fragment implements Constants, OnMapRe
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     if (getArguments() != null) {
-      mLastLocation = (Location) getArguments().getParcelable(EXTRA_LAST_LOCATION);
+      mLastLocation = getArguments().getParcelable(EXTRA_LAST_LOCATION);
     }
   }
 
@@ -314,7 +314,7 @@ public class KaabaLocatorFragment extends Fragment implements Constants, OnMapRe
           }
         });
 
-    CheckBox doNotShow = (CheckBox) v.findViewById(R.id.checkbox_no_show);
+    CheckBox doNotShow = v.findViewById(R.id.checkbox_no_show);
     doNotShow.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
       @Override
       public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

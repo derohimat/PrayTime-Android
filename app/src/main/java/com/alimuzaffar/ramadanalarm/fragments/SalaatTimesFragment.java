@@ -47,7 +47,7 @@ public class SalaatTimesFragment extends Fragment implements Constants {
     super.onCreate(savedInstanceState);
     if (getArguments() != null) {
       mIndex = getArguments().getInt(EXTRA_ALARM_INDEX);
-      mLastLocation = (Location) getArguments().getParcelable(EXTRA_LAST_LOCATION);
+      mLastLocation = getArguments().getParcelable(EXTRA_LAST_LOCATION);
     }
   }
 
@@ -76,17 +76,17 @@ public class SalaatTimesFragment extends Fragment implements Constants {
     LinkedHashMap<String, String> prayerTimes =
         PrayTime.getPrayerTimes(getActivity(), mIndex, mLastLocation.getLatitude(), mLastLocation.getLongitude());
 
-    TextView title = (TextView) view.findViewById(R.id.card_title);
+    TextView title = view.findViewById(R.id.card_title);
     title.setText(TimeZone.getDefault().getID());
 
-    TextView fajr = (TextView) view.findViewById(R.id.fajr);
-    TextView dhuhr = (TextView) view.findViewById(R.id.dhuhr);
-    TextView asr = (TextView) view.findViewById(R.id.asr);
-    TextView maghrib = (TextView) view.findViewById(R.id.maghrib);
-    TextView isha = (TextView) view.findViewById(R.id.isha);
-    TextView sunrise = (TextView) view.findViewById(R.id.sunrise);
-    TextView sunset = (TextView) view.findViewById(R.id.sunset);
-    mAlarm = (TextView) view.findViewById(R.id.alarm);
+    TextView fajr = view.findViewById(R.id.fajr);
+    TextView dhuhr = view.findViewById(R.id.dhuhr);
+    TextView asr = view.findViewById(R.id.asr);
+    TextView maghrib = view.findViewById(R.id.maghrib);
+    TextView isha = view.findViewById(R.id.isha);
+    TextView sunrise = view.findViewById(R.id.sunrise);
+    TextView sunset = view.findViewById(R.id.sunset);
+    mAlarm = view.findViewById(R.id.alarm);
     mRamadanContainer = view.findViewById(R.id.ramadan_container);
 
     fajr.setText(prayerTimes.get(String.valueOf(fajr.getTag())));

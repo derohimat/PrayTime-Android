@@ -71,16 +71,16 @@ public class OnboardingCalculationMethodFragment extends OnboardingBaseFragment 
       ((AppCompatActivity) mListener).getSupportActionBar().setTitle(R.string.title_onboarding_calc_method);
     }
 
-    TextView title = (TextView) view.findViewById(R.id.card_title);
+    TextView title = view.findViewById(R.id.card_title);
     title.setText(R.string.calc_method);
 
-    options[0] = (TextView) view.findViewById(R.id.karachi);
-    options[1] = (TextView) view.findViewById(R.id.isna);
-    options[2] = (TextView) view.findViewById(R.id.mwl);
-    options[3] = (TextView) view.findViewById(R.id.makkah);
-    options[4] = (TextView) view.findViewById(R.id.egypt);
-    options[5] = (TextView) view.findViewById(R.id.tehran);
-    options[6] = (TextView) view.findViewById(R.id.jafri);
+    options[0] = view.findViewById(R.id.karachi);
+    options[1] = view.findViewById(R.id.isna);
+    options[2] = view.findViewById(R.id.mwl);
+    options[3] = view.findViewById(R.id.makkah);
+    options[4] = view.findViewById(R.id.egypt);
+    options[5] = view.findViewById(R.id.tehran);
+    options[6] = view.findViewById(R.id.jafri);
 
     AppSettings settings = AppSettings.getInstance(getActivity());
     int method = settings.getCalcMethodSetFor(mParam1);

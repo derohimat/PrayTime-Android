@@ -68,11 +68,11 @@ public class OnboardingAsrCalculationMethodFragment extends OnboardingBaseFragme
     view.findViewById(R.id.prev).setOnClickListener(this);
     view.findViewById(R.id.next).setOnClickListener(this);
 
-    TextView title = (TextView) view.findViewById(R.id.card_title);
+    TextView title = view.findViewById(R.id.card_title);
     title.setText(R.string.asr_method);
 
-    mHanfi = (TextView) view.findViewById(R.id.asr_hanfi);
-    mShafii = (TextView) view.findViewById(R.id.asr_shafii);
+    mHanfi = view.findViewById(R.id.asr_hanfi);
+    mShafii = view.findViewById(R.id.asr_shafii);
     mHanfi.setOnClickListener(this);
     mShafii.setOnClickListener(this);
 

@@ -683,10 +683,10 @@ public class PrayTime {
     // Test Prayer times here
     PrayTime prayers = new PrayTime();
 
-    prayers.setTimeFormat(prayers.TIME_12);
-    prayers.setCalcMethod(prayers.KARACHI);
-    prayers.setAsrJuristic(prayers.SHAFII);
-    prayers.setAdjustHighLats(prayers.ANGLE_BASED);
+    prayers.setTimeFormat(TIME_12);
+    prayers.setCalcMethod(KARACHI);
+    prayers.setAsrJuristic(SHAFII);
+    prayers.setAdjustHighLats(ANGLE_BASED);
 
     int[] offsets = {0, 0, 0, 0, 0, 0, 0}; // {Fajr,Sunrise,Dhuhr,Asr,Sunset,Maghrib,Isha}
     prayers.tune(offsets);

@@ -29,11 +29,11 @@ public class SetAlarmRamadanHelper implements CompoundButton.OnCheckedChangeList
     mIndex = alarmIndex;
     mSettings = AppSettings.getInstance(activity);
 
-    mRamadan = (CheckBox) mActivity.findViewById(R.id.ramadan);
-    mSuhoor = (Spinner) mActivity.findViewById(R.id.suhoor_offset);
-    mIftar = (Spinner) mActivity.findViewById(R.id.iftar_offset);
-    mSuhoorGroup = (ViewGroup) mActivity.findViewById(R.id.suhoor_alarm);
-    mIftarGroup = (ViewGroup) mActivity.findViewById(R.id.iftar_alarm);
+    mRamadan = mActivity.findViewById(R.id.ramadan);
+    mSuhoor = mActivity.findViewById(R.id.suhoor_offset);
+    mIftar = mActivity.findViewById(R.id.iftar_offset);
+    mSuhoorGroup = mActivity.findViewById(R.id.suhoor_alarm);
+    mIftarGroup = mActivity.findViewById(R.id.iftar_alarm);
 
     init();
   }

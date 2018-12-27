@@ -46,8 +46,8 @@ public class InitialConfigFragment extends Fragment implements View.OnClickListe
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
     View view = inflater.inflate(R.layout.fragment_initial_config, container, false);
-    mConfigureNow = (TextView) view.findViewById(R.id.configure_now);
-    mUseDefault = (TextView) view.findViewById(R.id.use_default);
+    mConfigureNow = view.findViewById(R.id.configure_now);
+    mUseDefault = view.findViewById(R.id.use_default);
 
     mConfigureNow.setOnClickListener(this);
     mUseDefault.setOnClickListener(this);
